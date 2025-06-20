@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -19,35 +18,35 @@
     --popover: 30 41 59;
     --popover-foreground: 248 250 252;
 
-    --primary: 139 92 246;
+    --primary: 241 68 207; /* red-violet 500 */
     --primary-foreground: 248 250 252;
 
-    --secondary: 71 85 105;
+    --secondary: 177 26 141; /* red-violet 700 */
     --secondary-foreground: 248 250 252;
 
-    --muted: 51 65 85;
-    --muted-foreground: 148 163 184;
+    --muted: 144 24 113; /* red-violet 800 */
+    --muted-foreground: 255 200 248;
 
-    --accent: 99 102 241;
+    --accent: 250 120 224; /* red-violet 400 */
     --accent-foreground: 248 250 252;
 
     --destructive: 220 38 38;
     --destructive-foreground: 248 250 252;
 
-    --border: 71 85 105;
-    --input: 71 85 105;
-    --ring: 139 92 246;
+    --border: 177 26 141; /* red-violet 700 */
+    --input: 177 26 141;
+    --ring: 241 68 207; /* red-violet 500 */
 
     --radius: 0.75rem;
 
     --sidebar-background: 15 23 42;
     --sidebar-foreground: 248 250 252;
-    --sidebar-primary: 139 92 246;
+    --sidebar-primary: 241 68 207;
     --sidebar-primary-foreground: 248 250 252;
-    --sidebar-accent: 99 102 241;
+    --sidebar-accent: 250 120 224;
     --sidebar-accent-foreground: 248 250 252;
-    --sidebar-border: 71 85 105;
-    --sidebar-ring: 139 92 246;
+    --sidebar-border: 177 26 141;
+    --sidebar-ring: 241 68 207;
   }
 
   .dark {
@@ -60,33 +59,33 @@
     --popover: 30 41 59;
     --popover-foreground: 248 250 252;
 
-    --primary: 139 92 246;
+    --primary: 241 68 207;
     --primary-foreground: 248 250 252;
 
-    --secondary: 71 85 105;
+    --secondary: 177 26 141;
     --secondary-foreground: 248 250 252;
 
-    --muted: 51 65 85;
-    --muted-foreground: 148 163 184;
+    --muted: 144 24 113;
+    --muted-foreground: 255 200 248;
 
-    --accent: 99 102 241;
+    --accent: 250 120 224;
     --accent-foreground: 248 250 252;
 
     --destructive: 220 38 38;
     --destructive-foreground: 248 250 252;
 
-    --border: 71 85 105;
-    --input: 71 85 105;
-    --ring: 139 92 246;
+    --border: 177 26 141;
+    --input: 177 26 141;
+    --ring: 241 68 207;
 
     --sidebar-background: 15 23 42;
     --sidebar-foreground: 248 250 252;
-    --sidebar-primary: 139 92 246;
+    --sidebar-primary: 241 68 207;
     --sidebar-primary-foreground: 248 250 252;
-    --sidebar-accent: 99 102 241;
+    --sidebar-accent: 250 120 224;
     --sidebar-accent-foreground: 248 250 252;
-    --sidebar-border: 71 85 105;
-    --sidebar-ring: 139 92 246;
+    --sidebar-border: 177 26 141;
+    --sidebar-ring: 241 68 207;
   }
 }
 
@@ -97,7 +96,7 @@
 
   body {
     @apply bg-background text-foreground font-[Inter];
-    background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #312e81 100%);
+    background: linear-gradient(135deg, #0f172a 0%, #901871 50%, #4f033a 100%);
     min-height: 100vh;
   }
 
@@ -108,11 +107,11 @@
 
 @layer components {
   .glass-effect {
-    @apply backdrop-blur-sm bg-white/5 border border-purple-500/30;
+    @apply backdrop-blur-sm bg-white/5 border border-[rgba(241,68,207,0.3)];
   }
 
   .feminine-card {
-    @apply bg-slate-800/60 backdrop-blur-sm border border-purple-500/30 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300;
+    @apply bg-slate-800/60 backdrop-blur-sm border border-[rgba(241,68,207,0.3)] rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300;
   }
 
   .floating-element {
@@ -120,7 +119,7 @@
   }
 
   .sparkle-cursor {
-    cursor: url("data:image/svg+xml,%3Csvg width='20' height='20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 2l2 6 6 0-4.5 3.5 1.5 6-5-4-5 4 1.5-6L2 8l6 0z' fill='%238b5cf6'/%3E%3C/svg%3E"), auto;
+    cursor: url("data:image/svg+xml,%3Csvg width='20' height='20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 2l2 6 6 0-4.5 3.5 1.5 6-5-4-5 4 1.5-6L2 8l6 0z' fill='%23f144cf'/%3E%3C/svg%3E"), auto;
   }
 
   .heart-hover {
@@ -128,11 +127,11 @@
   }
 
   .gradient-text {
-    @apply bg-gradient-to-r from-purple-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-[#fa78e0] via-[#f144cf] to-[#c922a4] bg-clip-text text-transparent;
   }
 
   .soft-shadow {
-    box-shadow: 0 10px 25px -5px rgba(139, 92, 246, 0.2), 0 4px 6px -2px rgba(139, 92, 246, 0.1);
+    box-shadow: 0 10px 25px -5px rgba(241, 68, 207, 0.2), 0 4px 6px -2px rgba(241, 68, 207, 0.1);
   }
 
   .animation-delay-500 {
@@ -158,12 +157,12 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(45deg, #8b5cf6, #6366f1);
+  background: linear-gradient(45deg, #f144cf, #c922a4);
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(45deg, #7c3aed, #4f46e5);
+  background: linear-gradient(45deg, #b11a8d, #901871);
 }
 
 /* Flower rain animation */
@@ -274,7 +273,7 @@
 
 .particle {
   position: absolute;
-  background: radial-gradient(circle, #8b5cf6, transparent);
+  background: radial-gradient(circle, #f144cf, transparent);
   border-radius: 50%;
   animation: float 6s infinite linear;
   opacity: 0.3;
