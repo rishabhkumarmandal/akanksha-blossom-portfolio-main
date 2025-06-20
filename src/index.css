@@ -278,3 +278,7 @@
   animation: float 6s infinite linear;
   opacity: 0.3;
 }
+
+.feminine-card {
+  @apply bg-pink-200/60 backdrop-blur-md border border-pink-300/50 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300;
+}
